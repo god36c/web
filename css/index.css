@@ -1,0 +1,594 @@
+/* 全局样式 */
+/* 浏览器默认给一些标签（所有标签）设置了内外边距 */
+*{margin: 0px; padding: 0px;}
+
+/* 去掉页面中所有的 li 的默认样式 小圆点 */
+li{list-style: none;}
+
+/* 去掉页面中所有超链接的下划线 */
+a{text-decoration: none;}
+
+/* img对齐方式设置为底部对齐 */
+img{vertical-align: bottom;}
+
+/* 头部样式 */
+.header{
+	/* 设置元素宽的属性 */
+	/* 如果不设置宽高，div这个标签，会继承父级的100% */
+	/* width: 300px; */
+	/* 设置高 */
+	height: 64px;
+	
+	/* 设置背景颜色 */
+	background-color: #2E2E2E;
+}
+
+.header-content{
+	width:1200px;
+	height: 64px;
+	/* background: pink; */
+	/* 元素居中 外边距*/
+	margin: 0px auto;
+	
+	/* 设置为flex布局 */
+	display: flex;
+	/* 设置排列方法的对齐方式 */
+	justify-content: space-between;
+}
+
+.logo{
+	width:142px;
+	height: 64px;
+	/* background-color: gray; */
+}
+
+.nav{
+	/* width:400px; */
+	height: 64px;
+	/* background-color: yellowgreen; */
+	/* 设置为flex布局 */
+	display: flex;
+	/* 设置另外一个轴向对齐方式 */
+	align-items: center;
+}
+
+/* 后代选择器 */
+.nav li{
+	/* 设置左右一个外边距为30px */
+	margin: 0px 30px;
+}
+
+.nav li a{
+	/* 设置字体大小 */
+	font-size: 14px;
+	color: white;
+}
+
+.nav .active a{
+	color: orangered;
+}
+
+/* 鼠标移入  元素:hover*/
+.nav li a:hover{
+	color: orangered;
+}
+
+.btn{
+	/* width:300px; */
+	height: 64px;
+	/* background-color: orange; */
+	/* 设置为flex布局 */
+	display: flex;
+	/* 设置另外一个轴向对齐方式 */
+	align-items: center;
+}
+
+/* 并集选择器 都 多个元素共同使用一条或多条样式 */
+.login, .register{
+	width:55px;
+	height: 30px;
+	color: white;
+	font-size: 14px;
+	/* 设置单行文本左右居中 */
+	text-align: center;
+	/* 设置单行文本的上下居中 */
+	line-height: 30px;
+	
+	/* 设置光标的样式 */
+	cursor: pointer;
+}
+
+.login{
+	background-color: #e03f26;
+	/* 设置一个右外边距 */
+	margin-right: 5px;
+	border-radius: 6px 0px 0px 6px;
+}
+
+.register{
+	background-color: #bc3c28;
+	border-radius: 0px 6px 6px 0px;
+}
+
+.login:hover{
+	background-color: #bc3c28;
+}
+.register:hover{
+	background-color: #e03f26;
+}
+
+/* 轮播图 */
+.banner{
+	/* 当页面元素内容宽度大于浏览器（body）宽高，就会出现左右滚动条 */
+	/* 用户体验极差 */
+	/* width:1920px; */
+	height: 450px;
+	width: auto;
+	/* background: gray; */
+	/* 溢出隐藏 */
+	overflow: hidden;
+	/* 设置子级元素的定位参照，原点 */
+	position: relative;
+	
+}
+
+/* 定位 图片 居中 */
+.banner img{
+	position: absolute;
+	/* left: 300px; */
+	/* 用百分比设置，百分比以父级宽度 */
+	left: 50%;
+	/* 向左移动图片宽度的一半 */
+	margin-left: -960px;
+	top: 0px;
+}
+
+.base-title{
+	width:1200px;
+	height: 90px;
+	/* background-color: yellowgreen; */
+	/* 元素左右居中 */
+	margin: 0px auto;
+	
+	/* 设置文本左右居中 */
+	text-align: center;
+	
+	/* 设置上内边距，把内容往下挤 */
+	padding-top: 70px;
+}
+
+.base-title h1{
+	/* 设置字体不加粗 */
+	font-weight: normal;
+	font-size: 28px;
+	color: #333;
+	line-height: 42px;
+}
+
+.base-title p{
+	/* font-size: 16px; */
+	line-height: 34px;
+	color: #666;
+}
+
+/* 考研的详情 */
+.test{
+	width:1200px;
+	height: 338px;
+	/* background-color: gray; */
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+}
+
+.test div{
+	width:368px;
+	height: 338px;
+	/* background: orange; */
+}
+
+.test div h3{
+	font-size: 18px;
+	color: #333;
+	line-height: 40px;
+}
+
+.test div p{
+	font-size: 14px;
+	color: #666;
+}
+
+.test-banner{
+	width:1200px;
+	height: 112px;
+	/* background-color: gray; */
+	margin: 0px auto;
+}
+
+/* 课程的详情 */
+.mid_course{
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.mid_course div{
+    cursor: pointer;
+}
+
+.mid_course div:hover{
+    transform: scale(102%);
+}
+
+.course{
+    height: 380px;
+    width: 570px;
+    padding:10px;
+    border: 1px #d2d2d2 solid ;
+}
+
+.course img{
+    border: 1px #d2d2d2 solid ;
+}
+
+.course div h3{
+    font-size: 18px;
+    color: #333;
+    line-height: 40px;
+}
+
+.course div p{
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+}
+
+.course_left{
+    margin-right: 10px;
+}
+
+.course_right{
+    margin-left: 10px;
+}
+
+.most {
+    height: 80px;
+    width: 1200px;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.botton{
+    width: 160px;
+    height: 32px;
+    border: 1px solid #e03f26;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    color: #e03f26;
+    display: flex;
+    justify-content: center;
+}
+
+.botton div{
+    display: flex;
+    margin-left: 10px;
+}
+
+.botton:hover{
+    transform: scale(110%);
+}
+
+.table,.table th,.table td{
+    border: 1px solid #efefef;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table{
+    height: 474px;
+    width: 1200px;
+}
+
+.table td{
+    text-align: center;
+}
+
+.table td img{
+    margin-top: 10px;
+}
+
+.table td h3{
+    line-height: 40px;
+    font-size: 18px;
+    color: #666;
+}
+
+.table td p{
+    font-size: 16px;
+    color: red;
+}
+
+.answer_logo {
+    width: 69px;
+    height: 59px;
+    float: left;
+    margin-top: -22px;
+}
+
+.channel{
+    width: 1190px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.section{
+    width: 150px;
+    height: 150px;
+    background-color: #ff6f4f;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.section img{
+    margin-top: 20px;
+}
+
+.section p{
+    margin-top: 15px;
+    color: white;
+}
+
+.section_right{
+    width: 0;
+}
+
+.section_top{
+    width: 1050px;
+    height: 70px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    display: flex;
+}
+
+#id_1 {
+    margin-right: 10px;
+    width: 150px;
+    background-color: #62c7a9;
+
+}
+
+#id_2{
+    margin-right: 10px;
+    width: 150px;
+    background-color: #e4c09a;
+}
+
+#id_3{
+    margin-right: 10px;
+    width: 500px;
+    background-color: #4db1d2;
+}
+
+#id_3 div{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#id_3 p{
+    margin-left: 10px;
+}
+
+#id_4{
+    width: 210px;
+    background-color: #ffa963;
+}
+
+.section_bottom{
+    width: 1050px;
+    height: 70px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    margin-top: 10px;
+    display: flex;
+}
+
+#id_5{
+    width: 250px;
+    background-color: #6c6c6c;
+}
+
+#id_5 div{
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#id_5 p{
+    margin-left: 10px;
+}
+
+#id_6{
+    margin-left: 10px;
+    width: 190px;
+    background-color:#87ccc5;
+}
+
+#id_7{
+    margin-left: 10px;
+    width: 210px;
+    background-color: #ff8c75;
+}
+
+#id_8{
+    margin-left: 10px;
+    width: 360px;
+    background-color: #ff8c75;
+}
+
+#id_8 div{
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#id_8 p{
+    margin-left: 10px;
+}
+
+/* 试听的详情 */
+.test2 div h3{
+	font-size: 18px;
+	color: #333;
+	line-height: 40px;
+}
+
+.edge{
+    width: 69px;
+    height: 59px;
+    float: left;
+        margin-top: -18px;
+}
+
+.xue{
+    position: relative;
+    margin-left: -60px;
+}
+
+.test2 div p{
+	font-size: 14px;
+	color: red;
+}
+
+.shiting{
+	width: 1160px;
+	height: 714px;
+}
+
+/*产品服务专区*/
+.cpfw{
+    height: 620px;
+}
+
+.product_border{
+    width: 1200px;
+    height: 412px;
+    border: 1px solid #b4b2b2;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_left,.product_mid,.product_right{
+    height: 394px;
+    width: 320px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+}
+
+.product_border p{
+    margin-top: 20px;
+    line-height: 30px;
+    text-align: left;
+}
+
+.product_border img{
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*最底下的导航栏*/
+.tail{
+    height: 253px;
+    background-color: #2e2e2e;
+}
+
+.tail_file{
+    height: 253px;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.tail_content{
+    margin-left:52px ;
+    margin-right: 52px;
+    text-align: left;
+    display: flex;
+}
+
+.table1{
+    width: 760px;
+    line-height: 50px;
+    color: white;
+    border: none;
+}
+
+.table1 th{
+    font-size: 14px;
+}
+
+.table1 td{
+    font-size: 12px;
+}
+
+.ch_logo{
+    width: auto;
+    height: auto;
+    margin: 30px 12px 0 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ch_logo div{
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+
+.end{
+    height: 110px;
+    color:white;
+    font-size: 12px;
+    background-color: #212121;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.end_connect{
+    height: 80px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.end_connect div{
+    width: 390px;
+    margin-top: 25px;
+}
+
+.link{
+    color: white;
+}
+
+.link:hover{
+    color: #e03f26;
+    font-weight: bold;
+}
